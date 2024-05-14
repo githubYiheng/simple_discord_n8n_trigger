@@ -1,0 +1,13 @@
+[Unit]
+Description=discord-n8n-webhook
+After=network.target
+
+[Service]
+User=wang2gou
+WorkingDirectory=/home/wang2gou/repo/simple_discord_n8n_trigger
+ExecStart=/home/wang2gou/miniconda3/envs/discord_bot_env/bin/python /home/wang2gou/repo/simple_discord_n8n_trigger/bot.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
